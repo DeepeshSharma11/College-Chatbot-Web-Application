@@ -1,147 +1,125 @@
-College Chatbot Web Application
+# 🎓 College Chatbot Web Application
 
-A web-based AI chatbot designed to assist students, faculty, and visitors with college-related queries such as admissions, courses, fees, placements, faculty details, and events.
+A professional AI-driven chatbot designed to assist students, faculty, and visitors with real-time college-related queries. It uses a **Hybrid Intelligence** approach: an FAQ knowledge base for precision and **GPT-2** for conversational flexibility.
 
-This project is built using:
+---
 
-Python 3.12
+## 🚀 Key Features
+* **Interactive UI:** Modern, responsive web interface with glassmorphism design.
+* **Hybrid Logic:** FAQ-first matching with a GPT-2 fallback mechanism for unknown queries.
+* **Real-time Processing:** Fast asynchronous messaging using Flask and JavaScript.
+* **Production Ready:** Optimized for Python 3.12 and ready for Render deployment.
 
-Flask (Backend)
+---
 
-GPT-2 (HuggingFace Transformers)
+## 🛠️ Tech Stack
+| Component | Technology |
+| :--- | :--- |
+| **Backend** | Python 3.12, Flask |
+| **AI/ML** | GPT-2 (HuggingFace Transformers), PyTorch |
+| **Frontend** | HTML5, CSS3, JavaScript (ES6) |
+| **Deployment** | Gunicorn, Render |
 
-HTML, CSS, JavaScript (Frontend)
+---
 
-Deployable on Render
+## 📋 Agile Project Management (Sprint Tracking)
+We follow a structured sprint-based development lifecycle to ensure quality and timely delivery.
 
-🚀 Features
+| Issue ID | Title | Priority | Assignee | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **CC-1** | Project Setup | High | DEEPESH SHARMA | ✅ DONE |
+| **CC-2** | Design Chat UI | High | MOHD KABIR KHAN | ⏳ TO DO |
+| **CC-3** | FAQ Knowledge Base | Medium | VINIT KUMAR | ⏳ TO DO |
+| **CC-4** | Flask Chat API | High | KUNAL DIWAKAR | ⏳ TO DO |
+| **CC-5** | GPT-2 Integration | High | DEVANSH | ⏳ TO DO |
+| **CC-9** | Deployment Setup | High | AACHAL SONI | ⏳ TO DO |
 
-Interactive web-based chat interface
+---
 
-FAQ-based response handling
+## 🧠 System Architecture & Workflow
+The chatbot follows a tiered logic to ensure the most accurate information is delivered to the user.
 
-GPT-2 fallback for dynamic responses
 
-Real-time messaging
 
-Easy deployment on Render
+1. **User Input:** Receives text from the web interface.
+2. **Intent Matching:** Checks the local `faq.json` for keyword matches.
+3. **AI Generation:** If no match is found, GPT-2 generates a contextual response.
+4. **Response Delivery:** Asynchronous update to the chat UI.
 
-Lightweight and Python 3.12 compatible
+---
 
-🏗️ Project Structure
+## 🏗️ Project Structure
+```text
 College-Chatbot/
 │
-├── app.py
-├── requirements.txt
-├── README.md
+├── app.py              # Main Flask Backend Logic
+├── requirements.txt    # Python Dependencies
+├── README.md           # Documentation
 │
 ├── templates/
-│   └── index.html
+│   └── index.html      # Modern Chat UI Layout
 │
 ├── static/
-│   └── style.css
+│   └── style.css       # Custom Styling & Glassmorphism
 │
 └── data/
-    └── faq.json
+    └── faq.json        # Predefined Knowledge Base
 
-⚙️ Installation & Setup
+
+
+    ⚙️ Installation & Setup
 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/College-Chatbot.git
+Bash
+git clone [https://github.com/yourusername/College-Chatbot.git](https://github.com/yourusername/College-Chatbot.git)
 cd College-Chatbot
-
 2️⃣ Create Virtual Environment
+Bash
 python -m venv venv
+
+# Windows
 venv\Scripts\activate
 
+# Mac/Linux
+source venv/bin/activate
+
 3️⃣ Install Dependencies
-pip install -r requirements.txt
+Bash
+pip install flask transformers torch gunicorn flask-cors requests
 
-
-If requirements.txt is not created yet:
-
-pip install flask transformers torch gunicorn
-
-
-Then generate:
-
+# Generate requirements file
 pip freeze > requirements.txt
 
+
 4️⃣ Run the Application
+Bash
 python app.py
 
 
-Open browser:
+Access via browser: http://127.0.0.1:5000
 
-http://127.0.0.1:5000
-
-🧠 How It Works
-
-User sends a message from the web interface.
-
-Flask receives the request.
-
-System checks FAQ knowledge base.
-
-If match found → predefined response.
-
-If no match → GPT-2 generates response.
-
-Response is returned to user.
 
 🌐 Deployment on Render
+Push your project to a GitHub repository.
 
-Push project to GitHub.
+Log in to Render and create a New Web Service.
 
-Go to https://render.com
+Build Command: pip install -r requirements.txt
 
-Create New Web Service.
+Start Command: gunicorn app:app
 
-Connect your GitHub repository.
-
-Configure:
-
-Build Command:
-
-pip install -r requirements.txt
-
-
-Start Command:
-
-gunicorn app:app
-
-
-Deploy.
-
-📦 Requirements
-
-Python 3.12+
-
-Flask
-
-Transformers
-
-Torch
-
-Gunicorn (for deployment)
 
 📊 Future Enhancements
+[ ] Database Integration: Moving chat logs to SQLite/PostgreSQL.
 
-Admin dashboard
+[ ] Admin Dashboard: GUI to update FAQs without editing JSON files.
 
-Chat history storage (Database)
+[ ] Voice Support: Voice-to-text integration for better accessibility.
 
-Multilingual support
-
-Voice-based chatbot
-
-Integration with college ERP
-
-Authentication system
-
-📄 License
-
-This project is developed for educational purposes.
+[ ] ERP Integration: Linking with college management systems for student records.
 
 👨‍💻 Author
+Deepesh Sharma Entrepreneur, Blogger, and B.Tech CSE Student
 
-Deepesh Sharma
+📄 License
+This project is developed for educational purposes and is open for academic collaboration.
+
