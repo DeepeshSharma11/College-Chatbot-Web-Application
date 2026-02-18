@@ -1,4 +1,30 @@
 flask 
 transformers 
 torch 
-gunicorn
+gunicorn# Core Backend
+Flask==3.0.0
+gunicorn==21.2.0
+
+# Rasa Framework
+rasa==3.6.15
+
+# Transformers (GPT-2)
+transformers==4.37.2
+torch==2.1.2
+accelerate==0.26.1
+
+# NLP Utilities
+spacy==3.7.2
+
+# HTTP & Utilities
+requests==2.31.0
+python-dotenv==1.0.1
+
+# JSON & Validation
+pydantic==1.10.13
+
+# CORS (if frontend separated)
+flask-cors==4.0.0
+
+# Optional (logging & production stability)
+uvicorn==0.27.1
