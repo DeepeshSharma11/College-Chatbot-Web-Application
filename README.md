@@ -1,4 +1,4 @@
-# 🎓 College Chatbot Web Application
+# 🎓 College Chatbot Web Application ( NOTE :- Use Python 3.10 Version)
 
 A professional AI-driven chatbot designed to assist students, faculty, and visitors with real-time college-related queries. It uses a **Hybrid Intelligence** approach: an FAQ knowledge base for precision and **GPT-2** for conversational flexibility.
 
